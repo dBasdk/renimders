@@ -16,7 +16,7 @@ while true:
         #echo infos
         let timer = infos[1].parseInt()
         if timer < now().toTime().toUnix():
-            discard execCmd("notify-send -t=10s test")
+            discard execCmd("notify-send -t=10 " & infos[0])
             rmRmd(c)
         c = c+1
     sleep(5000)
