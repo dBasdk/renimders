@@ -22,7 +22,6 @@ proc isNumeric*(str:string) : bool =
         result = false
 
 proc getSec*(str:string) : int = 
-    var seconds = 0
     let unit = $str[^1]
     let n = $str[0..^2]
     let mult = units{unit}.getInt()

@@ -1,0 +1,5 @@
+[Service]
+ExecPreStart="/usr/bin/sleep 15"
+ExecStart="/usr/bin/checkrmd"
+Restart=always
+

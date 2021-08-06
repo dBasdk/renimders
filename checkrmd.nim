@@ -10,13 +10,13 @@ while true:
     let file = open(getHomeDir() & "/.rmds/rmds")
     c = 0
     for i in file.readAll().splitLines():
-        if i== "":
+        if i == "":
             continue
         let infos = i.rsplit(" ~ ", 1)
         #echo infos
         let timer = infos[1].parseInt()
         if timer < now().toTime().toUnix():
-            discard execCmd("notify-send -t=10 " & infos[0])
+            discard execCmd("notify-send -t=10s test")
             rmRmd(c)
         c = c+1
     sleep(5000)

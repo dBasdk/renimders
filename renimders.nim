@@ -1,12 +1,12 @@
 import nap
-import os
 import strutils
 import times
 import protocol
 
 let timer = use_arg(name="timer", kind="value", alt="t")
 let r = use_arg(name="reason", kind="argument")
-let date = use_arg(name="date", kind="value", alt="d")
+#let date = use_arg(name="date", kind="value", alt="d")
+#date argument is here for future purposes
 
 parse_args()
 
